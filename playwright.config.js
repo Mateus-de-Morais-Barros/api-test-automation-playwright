@@ -20,7 +20,7 @@ export default defineConfig({
   reporter: 'line',
 
   use: {
-    baseURL: 'http://localhost:3001',
+    baseURL: process.env.CI ? 'https://restful-booker.herokuapp.com' :'http://localhost:3001',
     trace: 'on-first-retry',
   },
 
