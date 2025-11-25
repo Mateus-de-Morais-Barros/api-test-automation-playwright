@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 
 test.describe("Auth - CreateToken", () => {
+
     test("Validar criação de token com Sucesso", async ({ request })=>{
         const username = "admin"
         const password = "password123"
@@ -100,6 +101,6 @@ test.describe("Auth - CreateToken", () => {
             }
         })
 
-        expect(response.status()).toe(400)
+        expect(response.status()).toBe(400)
     })
 })
